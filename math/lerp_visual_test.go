@@ -2,12 +2,13 @@ package math
 
 import (
 	"bytes"
-	"github.com/sebdah/goldie/v2"
-	"golang.org/x/image/colornames"
 	"image"
 	"image/png"
 	"math"
 	"testing"
+
+	"github.com/sebdah/goldie/v2"
+	"golang.org/x/image/colornames"
 )
 
 func TestEasingFunctionsVisual(t *testing.T) {
