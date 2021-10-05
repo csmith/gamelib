@@ -10,3 +10,6 @@ in particular ones using the [Ebiten](https://ebiten.org/) library.
 * Linear interpolation functions (lerp)
 * Easing functions
 
+### github.com/csmith/gamelib/sprite
+
+* Sprite sheets

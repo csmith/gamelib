@@ -1,5 +1,10 @@
 package math
 
+import (
+	"image"
+	"math"
+)
+
 // Lerp performs a linear interpolation between two values, given the progress between them in the range [0,1].
 func Lerp(v1, v2 float64, progress float64) float64 {
 	return v1 + (v2-v1)*progress
@@ -9,6 +14,15 @@ func Lerp(v1, v2 float64, progress float64) float64 {
 // range [0,1].
 func Lerp2D(x1, y1 float64, x2, y2 float64, progress float64) (x, y float64) {
 	return Lerp(x1, x2, progress), Lerp(y1, y2, progress)
+}
+
+// LerpPoint performs linear interpolation on both the X and Y coordinates of the given points. The resulting
+// value is rounded to the nearest int.
+func LerpPoint(p1, p2 image.Point, progress float64) image.Point {
+	return image.Pt(
+		int(math.Round(Lerp(float64(p1.X), float64(p2.X), progress))),
+		int(math.Round(Lerp(float64(p1.X), float64(p2.X), progress))),
+	)
 }
 
 // EaseIn is an easing function that slows progress at the start.
