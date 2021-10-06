@@ -2,6 +2,7 @@ package sprites
 
 import (
 	"bytes"
+	"errors"
 	"fmt"
 	"image/png"
 	"os"
@@ -12,38 +13,28 @@ import (
 	"github.com/sebdah/goldie/v2"
 )
 
+var errDone = errors.New("done")
+
 type TestGame struct {
-	UpdateFunc func()
+	m *testing.M
 }
 
-func (t TestGame) Update() error {
-	t.UpdateFunc()
-	return fmt.Errorf("done")
+func (t *TestGame) Update() error {
+	t.m.Run()
+	return errDone
 }
 
-func (t TestGame) Draw(screen *ebiten.Image) {
+func (t *TestGame) Draw(screen *ebiten.Image) {
 	// Ignore
 }
 
-func (t TestGame) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
+func (t *TestGame) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
 	return 1, 1
 }
 
 func TestMain(m *testing.M) {
-	defer func() {
-		e := recover()
-		if e != "Unable to start game loop: done" {
-			panic(e)
-		}
-	}()
-
-	game := &TestGame{
-		UpdateFunc: func() {
-			m.Run()
-		},
-	}
-	if err := ebiten.RunGame(game); err != nil {
-		panic(fmt.Sprintf("Unable to start game loop: %v", err))
+	if err := ebiten.RunGame(&TestGame{m}); err != errDone {
+		panic(err)
 	}
 }
 
