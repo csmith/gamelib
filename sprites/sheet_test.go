@@ -2,7 +2,6 @@ package sprites
 
 import (
 	"bytes"
-	"errors"
 	"fmt"
 	"image/png"
 	"os"
@@ -12,31 +11,6 @@ import (
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/sebdah/goldie/v2"
 )
-
-var errDone = errors.New("done")
-
-type TestGame struct {
-	m *testing.M
-}
-
-func (t *TestGame) Update() error {
-	t.m.Run()
-	return errDone
-}
-
-func (t *TestGame) Draw(screen *ebiten.Image) {
-	// Ignore
-}
-
-func (t *TestGame) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
-	return 1, 1
-}
-
-func TestMain(m *testing.M) {
-	if err := ebiten.RunGame(&TestGame{m}); err != errDone {
-		panic(err)
-	}
-}
 
 func TestSheet_Sprite(t *testing.T) {
 	gold := goldie.New(t)

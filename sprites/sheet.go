@@ -30,3 +30,8 @@ func (s *Sheet) Sprite(index int) *ebiten.Image {
 	y := (index / s.cols) * s.height
 	return s.im.SubImage(image.Rect(x, y, x+s.width, y+s.height)).(*ebiten.Image)
 }
+
+// Size returns the width and height of a single sprite in this sheet, in pixels.
+func (s *Sheet) Size() (width, height int) {
+	return s.width, s.height
+}

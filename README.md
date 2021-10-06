@@ -13,3 +13,4 @@ in particular ones using the [Ebiten](https://ebiten.org/) library.
 ### github.com/csmith/gamelib/sprite
 
 * Sprite sheets
+* Text rendering for sprite-based fonts
