@@ -15,6 +15,11 @@ in particular ones using the [Ebiten](https://ebiten.org/) library.
 * Sprite sheets
 * Text rendering for sprite-based fonts
 
+### `github.com/csmith/gamelib/structure` (Ebiten specific)
+
+* Scene-based Game implementation
+* Layer rendering 
+
 ## Potential future additions
 
 - [ ] RNG with bad luck prevention
