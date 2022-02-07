@@ -18,7 +18,7 @@ func (s *SceneGame) Update() (err error) {
 }
 
 func (s *SceneGame) Draw(screen *ebiten.Image) {
-	s.Draw(screen)
+	s.Scene.Draw(screen)
 }
 
 func (s *SceneGame) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
