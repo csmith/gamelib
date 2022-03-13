@@ -20,6 +20,10 @@ in particular ones using the [Ebiten](https://ebiten.org/) library.
 * Scene-based Game implementation
 * Layer rendering 
 
+### `github.com/csmith/gamelib/text` (Ebiten specific)
+
+* Text drawing with shadows
+
 ## Potential future additions
 
 - [ ] RNG with bad luck prevention
