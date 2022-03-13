@@ -52,8 +52,10 @@ func TestSheet_Sprite(t *testing.T) {
 				return
 			}
 
+			_ = os.MkdirAll("../testoutput/", 0755)
+			_ = os.WriteFile(fmt.Sprintf("../testoutput/sheet-%s.png", files[i]), writer.Bytes(), 0644)
+
 			gold.Assert(t, "sheet", writer.Bytes())
 		})
 	}
 }
-

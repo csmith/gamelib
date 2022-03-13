@@ -39,5 +39,8 @@ func TestShadowed(t *testing.T) {
 		return
 	}
 
+	_ = os.MkdirAll("../testoutput/", 0755)
+	_ = os.WriteFile("../testoutput/shadowed.png", writer.Bytes(), 0644)
+
 	gold.Assert(t, "shadowed", writer.Bytes())
 }

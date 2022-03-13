@@ -38,6 +38,9 @@ func TestTextRenderer_Render_CaseInsensitive(t *testing.T) {
 		return
 	}
 
+	_ = os.MkdirAll("../testoutput/", 0755)
+	_ = os.WriteFile("../testoutput/textrender-case-insensitive.png", writer.Bytes(), 0644)
+
 	gold.Assert(t, "textrender-case-insensitive", writer.Bytes())
 }
 
@@ -68,6 +71,9 @@ func TestTextRenderer_Render_CaseSensitive(t *testing.T) {
 		return
 	}
 
+	_ = os.MkdirAll("../testoutput/", 0755)
+	_ = os.WriteFile("../testoutput/textrender-case-sensitive.png", writer.Bytes(), 0644)
+
 	gold.Assert(t, "textrender-case-sensitive", writer.Bytes())
 }
 
@@ -97,6 +103,9 @@ func TestTextRenderer_RenderWrapped(t *testing.T) {
 		t.Errorf("Unable to encode test image: %v", err)
 		return
 	}
+
+	_ = os.MkdirAll("../testoutput/", 0755)
+	_ = os.WriteFile("../testoutput/textrender-wrapped.png", writer.Bytes(), 0644)
 
 	gold.Assert(t, "textrender-wrapped", writer.Bytes())
 }

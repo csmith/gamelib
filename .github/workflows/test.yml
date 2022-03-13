@@ -29,3 +29,10 @@ jobs:
 
       - name: Test
         run: go test ./...
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: tests
+          path: testoutput/
