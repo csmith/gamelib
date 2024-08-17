@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/hajimehoshi/ebiten/v2 v2.7.8
-	github.com/sebdah/goldie/v2 v2.5.3
+	github.com/sebdah/goldie/v2 v2.5.5
 	golang.org/x/image v0.18.0
 )
 
