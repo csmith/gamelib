@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/hajimehoshi/ebiten/v2 v2.7.8
 	github.com/sebdah/goldie/v2 v2.5.5
-	golang.org/x/image v0.19.0
+	golang.org/x/image v0.20.0
 )
 
 require (
@@ -17,5 +17,5 @@ require (
 	github.com/sergi/go-diff v1.0.0 // indirect
 	golang.org/x/sync v0.8.0 // indirect
 	golang.org/x/sys v0.20.0 // indirect
-	golang.org/x/text v0.17.0 // indirect
+	golang.org/x/text v0.18.0 // indirect
 )
