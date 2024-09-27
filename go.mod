@@ -1,6 +1,8 @@
 module github.com/csmith/gamelib
 
-go 1.17
+go 1.22.0
+
+toolchain go1.23.1
 
 require (
 	github.com/hajimehoshi/ebiten/v2 v2.8.0
