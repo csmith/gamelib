@@ -5,7 +5,7 @@ go 1.22.0
 toolchain go1.23.1
 
 require (
-	github.com/hajimehoshi/ebiten/v2 v2.8.5
+	github.com/hajimehoshi/ebiten/v2 v2.8.6
 	github.com/sebdah/goldie/v2 v2.5.5
 	golang.org/x/image v0.23.0
 )
