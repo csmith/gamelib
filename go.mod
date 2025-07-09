@@ -6,7 +6,7 @@ toolchain go1.24.0
 
 require (
 	github.com/hajimehoshi/ebiten/v2 v2.8.8
-	github.com/sebdah/goldie/v2 v2.6.0
+	github.com/sebdah/goldie/v2 v2.7.1
 	golang.org/x/image v0.28.0
 )
 
