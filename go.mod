@@ -3,7 +3,7 @@ module github.com/csmith/gamelib
 go 1.24.0
 
 require (
-	github.com/hajimehoshi/ebiten/v2 v2.9.0
+	github.com/hajimehoshi/ebiten/v2 v2.9.1
 	github.com/sebdah/goldie/v2 v2.7.1
 	golang.org/x/image v0.32.0
 )
